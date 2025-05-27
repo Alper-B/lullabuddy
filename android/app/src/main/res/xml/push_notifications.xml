@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<push_notifications>
+  <channel
+    id="default"
+    name="Default"
+    description="General notifications"
+    importance="max"
+    sound="default"
+    vibration="true" />
+</push_notifications>

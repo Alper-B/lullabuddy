@@ -1,0 +1,7 @@
+[build]
+  base    = "."            # Your project root
+  publish = "dist"         # This is the output folder created by Vite
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"

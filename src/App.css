@@ -1,0 +1,405 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+/* -------------------------------------------------- */
+/*                   Global Styles                   */
+/* -------------------------------------------------- */
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #1B1B37, #212145, #292852, #3C3C7C);
+  color: #E7E8FC;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------- */
+/*          Centering Helpers                        */
+/* -------------------------------------------------- */
+.page-center {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-wrap {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  box-sizing: border-box;
+}
+
+.landing-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* -------------------------------------------------- */
+/*                  Home Page Styles                 */
+/* -------------------------------------------------- */
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #9583ff;
+  margin-bottom: 2rem;
+}
+
+.sleep-label {
+  font-size: 1.4rem;
+  color: #d5d4f9;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.timer {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffe75c;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #E7E8FC;
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.toggle-label {
+  color: #E7E8FC;
+  font-size: 1rem;
+}
+
+/* End button */
+.end-btn {
+  background: #9583ff;
+  border-color: #7f6afa;
+  color: #ffffff;
+  width: 100%;
+  max-width: 300px;
+}
+
+.end-btn:hover {
+  background: #5c4eb1;
+}
+
+/* -------------------------------------------------- */
+/*                   Custom Switch CSS                */
+/* -------------------------------------------------- */
+.switch-track {
+  background-color: rgba(100, 100, 120, 0.5);
+}
+
+.switch-track[data-headlessui-state="checked"] {
+  background-color: rgba(224, 211, 79, 0.6);
+}
+
+.switch-thumb {
+  background-color: #f5f5f5;
+}
+
+.switch-thumb-on {
+  transform: translateX(1.75rem);
+}
+
+.switch-thumb-off {
+  transform: translateX(0.25rem);
+}
+
+/* -------------------------------------------------- */
+/*                   Form Inputs                     */
+/* -------------------------------------------------- */
+.input-box {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 16px;
+  border: 1px solid #5a5a8d;
+  border-radius: 12px;
+  background: #2e2e58;
+  color: #e7e8fc;
+  font-size: 1rem;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
+.input-box::placeholder {
+  color: rgba(231, 232, 252, 0.6);
+}
+
+.input-box:focus {
+  background: #393973;
+  border-color: #836eed;
+  outline: none;
+}
+
+/* -------------------------------------------------- */
+/*              Primary Lullaby Button               */
+/* -------------------------------------------------- */
+.btn.lullaby-btn {
+  background: linear-gradient(90deg, #836eed, #9583ff);
+  color: #ffffff;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.1s, box-shadow 0.1s;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.btn.lullaby-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+.btn.lullaby-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.20);
+}
+
+/* -------------------------------------------------- */
+/*                  Sounds Section                   */
+/* -------------------------------------------------- */
+.sounds-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.25rem;
+  max-width: 280px;
+  margin: 0 auto 2rem;
+  width: 100%;
+}
+
+.sound-btn {
+  background: #c4bdff;
+  color: #1b1b37;
+  font-weight: 600;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.sound-btn.active {
+  background: #ffe75c;
+  color: #1b1b37;
+}
+
+.fab {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #ffe75c;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.fab-plus {
+  font-size: 1.7rem;
+  color: #ffe75c;
+}
+
+/* -------------------------------------------------- */
+/*                     Tab Bar                       */
+/* -------------------------------------------------- */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #1c1c3d;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 100;
+}
+
+.tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9d96e9;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  color: #ffe75c;
+}
+
+.icon-img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 2px;
+}
+
+/* -------------------------------------------------- */
+/*                  Debug Overlay                    */
+/* -------------------------------------------------- */
+.debug-box {
+  position: fixed;
+  bottom: 76px;
+  left: 0;
+  right: 0;
+  font-size: 0.75rem;
+  color: #aaa;
+  text-align: center;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* -------------------------------------------------- */
+/*                Small Phone Adjust                 */
+/* -------------------------------------------------- */
+@media (max-width: 380px) {
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+  .sleep-label {
+    font-size: 1.2rem;
+  }
+  .page-center {
+    padding: 1rem;
+  }
+}
+
+/* -------------------------------------------------- */
+/*                  Auth Forms                       */
+/* -------------------------------------------------- */
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.auth-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #9c8bff;
+  margin: 0 auto 2rem;
+}
+
+.auth-title {
+  font-size: 1.7rem;
+  text-transform: lowercase;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-card {
+  background: transparent;
+  box-shadow: none;
+  width: 100%;
+  max-width: 340px;
+}
+
+.auth-input {
+  background: #24224d;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1rem;
+  color: #e7e8fc;
+  width: 100%;
+}
+
+.auth-input::placeholder {
+  color: #9796d6;
+  font-size: 0.9rem;
+}
+
+.auth-btn-primary {
+  background: #b49cff;
+  color: #fff;
+  border-radius: 9999px;
+  width: 100%;
+  padding: 0.75rem;
+}
+
+.auth-btn-google {
+  background: transparent;
+  border: 2px solid #ffe75c;
+  color: #ffe75c;
+  border-radius: 9999px;
+  width: 100%;
+  padding: 0.75rem;
+}
+
+.auth-sep {
+  margin: 0.75rem 0;
+  font-size: 0.8rem;
+  color: #aaa8e0;
+  text-align: center;
+}
+
+.auth-forgot {
+  font-size: 0.75rem;
+  color: #ffe75c;
+  text-align: right;
+  margin: 0.5rem 0 1rem;
+}
+
+.arrow-btn {
+  background: transparent;
+  border: none;
+  color: #e7e8fc;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}

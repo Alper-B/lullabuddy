@@ -1,0 +1,55 @@
+/* -------------------------------------------------- */
+/*  LANDING PAGE                                    */
+/* -------------------------------------------------- */
+
+.landing-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landing-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #9c8bff;
+  margin-bottom: 3rem;
+}
+
+.landing-title {
+  font-size: 2.5rem;
+  color: #e7e8fc;
+  font-family: "Caveat", "Segoe UI", cursive;
+  margin-bottom: 4rem;
+}
+
+.landing-btns {
+  width: 80%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.land-btn {
+  display: block;
+  padding: 14px 0;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  color: #1b1b37;
+}
+
+.land-btn.gradient {
+  background: linear-gradient(90deg, #8e7eff, #9f7bff);
+  color: #fff;
+}
+
+.land-btn.plain {
+  background: #dcd9ff;
+  color: #1b1b37;
+}
