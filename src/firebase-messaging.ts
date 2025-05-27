@@ -87,9 +87,3 @@ export function listenToForegroundMessages() {
   });
 }
 
-// Only attempt to show notifications if they're supported and permission is granted
-if ("Notification" in window && Notification.permission === "granted") {
-  new Notification("Your message here");
-} else {
-  console.warn("Notifications not supported on this browser or permission not granted.");
-}
